@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeriodicPlayground - Interactive List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="site-data/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="site-data/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="site-data/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="site-data/favicon-16x16.png">
+    <link rel="manifest" href="site-data/site.webmanifest">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <i class="fas fa-atom"></i>PeriodicPlayground
+        </h1>
+        <p>Discover the building blocks of our universe</p>
+      </header>
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search elements (name, symbol, or number)...">
+          <button id="clearSearch">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="filter-controls">
+          <div class="category-filter">
+            <label for="categorySelect">Filter by:</label>
+            <select id="categorySelect">
+              <option value="all">All Categories</option>
+              <option value="alkali">Alkali Metals</option>
+              <option value="alkaline">Alkaline Earth</option>
+              <option value="transition">Transition Metals</option>
+              <option value="basic">Basic Metals</option>
+              <option value="semimetal">Semimetals</option>
+              <option value="nonmetal">Nonmetals</option>
+              <option value="halogen">Halogens</option>
+              <option value="noble">Noble Gases</option>
+              <option value="lanthanide">Lanthanides</option>
+              <option value="actinide">Actinides</option>
+            </select>
+          </div>
+          <div class="state-filter">
+            <span>State:</span>
+            <button class="state-btn active" data-state="all">All</button>
+            <button class="state-btn" data-state="solid">Solid</button>
+            <button class="state-btn" data-state="liquid">Liquid</button>
+            <button class="state-btn" data-state="gas">Gas</button>
+          </div>
+        </div>
+      </div>
+      <div class="elements-list" id="elementsList"></div>
+      <div class="element-modal" id="elementModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="detailName">Select an Element</h2>
+            <button id="closeModal">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="element-basic-info">
+              <div class="element-symbol-box" id="detailSymbolBox">
+                <span class="element-symbol" id="detailSymbol">?</span>
+                <span class="element-number" id="detailNumber">0</span>
+              </div>
+              <div class="element-stats">
+                <div>
+                  <span class="stat-label">Atomic Mass:</span>
+                  <span id="detailMass">0</span>
+                </div>
+                <div>
+                  <span class="stat-label">Category:</span>
+                  <span id="detailCategory">Unknown</span>
+                </div>
+                <div>
+                  <span class="stat-label">State:</span>
+                  <span id="detailState">Unknown</span>
+                </div>
+                <div>
+                  <span class="stat-label">Electron Configuration:</span>
+                  <span id="detailElectronConfig">Unknown</span>
+                </div>
+              </div>
+            </div>
+            <div class="element-description" id="detailDescription"> Click on any element in the list to view its details here. </div>
+            <div class="element-properties">
+              <div class="property">
+                <h3>Discovery</h3>
+                <p id="detailDiscovery">Unknown</p>
+              </div>
+              <div class="property">
+                <h3>Uses</h3>
+                <p id="detailUses">Unknown</p>
+              </div>
+              <div class="property">
+                <h3>Fun Fact</h3>
+                <p id="detailFunFact">Unknown</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Created with <i class="fas fa-heart"></i> for science enthusiasts </p>
+        <p>Data sourced from various scientific resources</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
