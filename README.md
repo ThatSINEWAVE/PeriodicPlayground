@@ -2,7 +2,7 @@
 
 # [PeriodicPlayground](https://thatsinewave.github.io/PeriodicPlayground/)
 
-![RegexLab](https://raw.githubusercontent.com/ThatSINEWAVE/PeriodicPlayground/refs/heads/main/.github/SCREENSHOTS/PeriodicPlayground.png)
+![PeriodicPlayground](https://raw.githubusercontent.com/ThatSINEWAVE/PeriodicPlayground/refs/heads/main/.github/SCREENSHOTS/PeriodicPlayground.png)
 
 An interactive periodic table web application that allows users to explore chemical elements with detailed information.
 
